@@ -1,0 +1,98 @@
+<h1>
+Minimal Cut Sets...
+</h1>
+<hr>
+<p><b>
+Control Type
+</b><br>
+Menu Option
+</p>
+<p><b>
+Function
+</b><br>
+Calculates the minimal cut sets for the currently displayed fault tree.
+</p>
+<p><b>
+Location
+</b><br>
+OpenFTA menubar -> Analysis -> Minimal Cut Sets...
+</p><b>
+Shortcuts
+</b><br>
+Accelerator: None.
+<br>
+Toolbar: None.
+</p>
+<p><b>
+Pre-conditions
+</b><br>
+The fault tree has been saved and is logically valid.
+</p>
+<p><b>
+Operation
+</b><br>
+This menu option is used to initiate the generation of the minimal cut
+sets for a fault tree. 
+<br>
+When invoked, a minimal cut sets dialog
+with the title <i>OpenFTA: Minimal Cut Sets - Algebraic Method</i> is presented. 
+This dialog is used to specify whether 
+or not to use the minimal cut sets already on file and to specify which
+orders of minimal cut sets should be generated.
+<br>
+If a minimal cut sets file already exists then the <i>Use minimal cut sets
+on file</i> check box is selected and the directory path to the minimal
+cut sets file is displayed, as well as the number and order of the 
+available minimal cut sets.
+<br>
+If the <i>Generate all minimal cut sets</i> radio button is selected, all 
+orders of minimal cut sets for the fault tree will be calculated. If 
+the <i>Limit minimal cut set order to</i> radio button is selected, only 
+minimal cut sets up to a specific order will be generated. The required
+maximum cut set order is specified using the spin buttons (the two, 
+back-to-back arrows).
+<br>
+On activation of the <i>OK</i> button, OpenFTA displays a working dialog 
+and carries out the minimal cut set generation, using the parameters 
+requested. The <i>Stop</i> button on the working dialog may be pressed to 
+abort the generation of the minimal cut sets.
+<br>
+Note that the generation of minimal cut sets may take a long time for 
+very large trees, when large order minimal cut sets are required.
+<br>
+On activation of the <i>Cancel</i> button, the operation is aborted and the 
+dialog is removed.
+<br>
+On activation of the <i>Help</i> button, context sensitive help information is
+displayed.
+<br>
+On completion of the operation, a Qualitative Report is generated (to a
+file named: <code>&ltfault tree name&gt.mcs</code>) and displayed in a dialog. The 
+report consists of:
+<ul>
+<li>the name of the file used to store the fault tree analysed in
+this report
+<li>the date and time of the report's creation
+<li>the method used to calculate the minimal cut sets
+<li>the number of unique primary events in the fault tree, including those
+in any transfer trees
+<li>the range of cut set orders possible for the fault tree
+a list of the minimal cut sets separated into the orders that have been
+located
+<li>a table titled Qualitative Importance Analysis. The table represents 
+the distribution of the number of minimal cut sets found per order of 
+cut sets that are possible for the fault tree.
+</ul></p>
+<p><b>
+Cross References
+</b><br>
+<a href="fta_analysis_menu.html">Analysis</a>
+<br>
+<a href="PrintFTARep.html">Print (Formal_FTA, Report).</a>
+<br>
+<a href="fta_report_menu.html">Report</a>
+<br>
+<a href="Validate.html">Validate</a>
+<br>
+<a href="ViewFTARep.html">View (OpenFTA, Report)</a>
+</p>

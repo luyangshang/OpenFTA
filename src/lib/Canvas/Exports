@@ -1,0 +1,9 @@
+# Header files exported from this directory and their dependencies
+#
+CANVAS_H  = ${TOP}/Canvas/Canvas.h
+CANVASP_H = ${TOP}/Canvas/CanvasP.h\
+  $(JAVACANVASP_H) $(POSTSCRIPTP_H)
+JAVACANVASP_H = ${TOP}/Canvas/JavaCanvasP.h
+JAVACANVAS_H = ${TOP}/Canvas/JavaCanvas.h
+POSTSCRIPTCANVAS_H = ${TOP}/Canvas/PostScriptCanvas.h
+POSTSCRIPTCANVASP_H = ${TOP}/Canvas/PostScriptCanvasP.h

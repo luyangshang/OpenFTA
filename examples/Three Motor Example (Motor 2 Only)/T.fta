@@ -1,0 +1,34 @@
+Three Motor Example (Motor 2 Only).ped
+S NULL 0
+0
+M E1 2 
+67 K1 relay contacts fail to open when K3 contacts closed for t>60 sec
+T T.fta 0 
+O OR1 2 
+M E2 1 
+71 EMF not removed from K1 relay coil when K3 contacts closed for t>60 sec
+O OR2 2 
+M E3 1 
+74 EMF to K1 coil through timer circuit when K3 contacts vlosed for t>60 sec 
+A AND1 3 
+M E5 1 
+68 KT1 timer contacts fail to open when K3 contacts closed for t>60 sec
+O OR4 2 
+B KT1inc 0 
+U T2inc 0 
+M E6 1 
+68 KT2 timer contacts fail to open when K3 contacts closed for t>60 sec
+O OR5 2 
+B KT2inc 0 
+U T3inc 0 
+M E7 1 
+68 KT3 timer contacts fail to open when K3 contacts closed for t>60 sec
+O OR6 2 
+B KT3inc 0 
+U T4inc 0 
+M E4 1 
+72 EMF to K1 coil through S1 contacts when K3 contacts vlosed for t>60 sec 
+O OR3 2 
+B S1 0 
+U T1inc 0 
+B K1 0 

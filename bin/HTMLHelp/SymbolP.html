@@ -1,0 +1,104 @@
+<h1>
+Symbol Palette
+</h1><hr><p><b>
+Control Type
+</b><br>
+Push Buttons
+</p><p><b>
+Function
+</b><br>
+The set of symbols available to draw a fault tree.
+</p><p><b>
+Location
+</b><br>
+Left hand side of the OpenFTA window
+</p><p><b>
+Shortcuts
+</b><br>
+Accelerator: None.
+<br>
+Toolbar: None.
+</p><p><b>
+Pre-conditions
+</b><br>
+A symbol on the canvas is selected.
+</p><p><b>
+Operation
+</b><br>
+Selecting a symbol from the palette adds the chosen symbol as the right
+most child of the symbol selected on the canvas.
+<br>
+Note that the tree layout is managed automatically and that the symbol 
+palette is context sensitive and thus prevents illogical additions to 
+the tree by greying out inappropriate symbols.
+<br>
+The Symbol Palette is made up of events, gates and transfer symbols.
+</p><p><b>
+Event Symbols:
+</b><br>
+<img src="images/intermediate event.gif" border=0>Intermediate Event: Used to specify a failure event that occurs due to 
+one or more causes acting through logic gates below it in the fault 
+tree.
+<br>
+<img src="images/basic initiating event.gif" border=0>Basic Initiating Event: Used to specify a failure event that does not 
+require any further development i.e. it is a `leaf' of the fault tree 
+and has no gates or events below it in the tree.
+<br>
+<img src="images/undeveloped event.gif" border=0>Undeveloped Event: Used to specify a failure event that is not 
+developed as far as it could be, either because the event is of no 
+importance in this fault tree, or because there is not enough 
+information available.
+<br>
+<img src="images/external event.gif" border=0>External Event: Used to specify a failure event that is expected to 
+occur and is therefore not directly a failure. The event can <u>only</u> have 
+a probability attached to it of 0 (Failed) or 1 (Working).
+<br>
+<img src="images/conditioning event.gif" border=0>Conditioning Event: Used to specify certain conditions upon any logic 
+gate. There are two states for this type of event: <i>Analysed</i> - a 
+probability is assigned to the event and it forms part of the analysis 
+of the tree; <i>Not Analysed</i> - no probability is assigned to the event and
+it's role is to add pertinent comments. This type of event is mainly 
+used in conjunction with the Priority And and Inhibit gates and is 
+displayed to the right of a gate.
+</p><p><b>
+Logic Gate Symbols:
+</b><br>
+<img src="images/and gate.gif" border=0>And Gate: Used to show that the output fault will only happen if all of
+the inputs occur.
+<br>
+<img src="images/or gate.gif" border=0>Or Gate: Used to show that the output fault will only occur if one or 
+more of the input faults take place.
+<br>
+<img src="images/priority and gate.gif" border=0>Priority And Gate: The output only occurs if the input faults take 
+place in a certain order. The sequence of events is usually stated in a
+conditioning event, situated to the right of the gate.
+<br>
+<img src="images/exclusive or gate.gif" border=0>Exclusive Or Gate: The output only occurs if exactly one of the input 
+faults happens.
+<br>
+<img src="images/inhibit gate.gif" border=0>Inhibit Gate: The output fault only occurs if the <u>single</u> input happens 
+and the attached Conditioning Event is satisfied. The gate is in 
+effect a special case <i>And</i> gate.
+</p><p><b>
+Transfer Symbols:
+</b><br>
+These symbols are used to modularise a fault tree. For example, if 
+there is a sequence of events that occurs in more than one place in the
+fault tree, then it can be removed and placed into a separate sub-tree
+and just referenced by the main fault tree.
+<br>
+<img src="images/transfer in.gif" border=0>Transfer In: Used to depict a sub-tree that has been stored in a 
+separate .fta file. The name of the file is used as the identifier for 
+the transfer in symbol. Note that the .fta suffix is added 
+automatically to the file name.
+<br>
+<img src="images/transfer out.gif" border=0>Transfer Out: Used to depict that the tree shown below a transfer out 
+symbol is a sub-tree of a fault tree that is stored in a different 
+file. The name of the sub-tree may be used as the identifier for the 
+transfer out symbol. Note that the .fta suffix is added automatically 
+to the file name.
+</p><p><b>
+Cross References
+</b><br>
+None.
+</p>

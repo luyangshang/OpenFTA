@@ -1,0 +1,31 @@
+# Header files visible outside Appn directory, and their
+# dependencies
+#
+BASIC_H           = ${TOP}/Appn/basic.h\
+  $(BOOLEAN_H) $(EXPR_H)
+BITS_H            = ${TOP}/Appn/bits.h
+BOOLEAN_H         = ${TOP}/Appn/boolean.h
+DISPLAY_ITEM_H    = ${TOP}/Appn/display_item.h\
+  $(BOOLEAN_H) $(ITEM_H) $(TREE_PIC_H)
+DISPLAY_TREE_H    = ${TOP}/Appn/display_tree.h\
+  $(TREE_PIC_H) $(TREE_PIC_FOREST) $(ITEM_H) $(LEVEL_H)
+EDIT_PD_H         = ${TOP}/Appn/edit_pd.h\
+  $(TREE_PIC_FOREST_H)
+EVENT_LIST_H      = ${TOP}/Appn/event_list.h\
+  $(BITS_H) $(BASIC_H) $(EXPR_H) $(TREE_H)
+FILE_PD_H         = ${TOP}/Appn/file_pd.h\
+  $(TREE_PIC_FOREST_H)
+FTA_H             = ${TOP}/Appn/fta.h
+ITEM_H            = ${TOP}/Appn/item.h\
+  $(BOOLEAN_H) $(BASIC_H)
+SYMBOL_MENU_H     = ${TOP}/Appn/symbol_menu.h\
+  $(TREE_PIC_FOREST_H) $(ITEM_H)
+TREE_H         = ${TOP}/Appn/treeUtil.h\
+  $(BOOLEAN_H) $(ITEM_H) $(TREEP_H) $(TREE_PIC_H)
+TREEP_H           = ${TOP}/Appn/treeP.h\
+  $(ITEM_H) $(EXPR_H) $(BOOLEAN_H) $(LEVELP_H)
+TREE_PIC_H        = ${TOP}/Appn/tree_pic.h\
+  $(SYMBOL_H)
+TREE_PIC_FOREST_H = ${TOP}/Appn/tree_pic_forest.h\
+  $(TREE_PIC_H)
+UTIL_H            = ${TOP}/Appn/util.h

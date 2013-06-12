@@ -1,0 +1,109 @@
+lift.ped
+S NULL 0
+0
+M NULL 1 
+15 Lift door fails
+O NULL 4 
+M NULL 1 
+21 Lift starts door open
+O NULL 4 
+M NULL 1 
+27 Lift motion detector failed
+B LMD_1 0 
+M NULL 1 
+29 Door position detector failed
+B DPD_1 0 
+M NULL 1 
+0
+A NULL 2 
+M NULL 1 
+17 Door motor failed
+B DM_1 0 
+M NULL 1 
+29 Door position detector failed
+B DPD_1 0 
+M NULL 1 
+19 Door motor too slow
+O NULL 2 
+M NULL 1 
+20 Power supply failure
+B PS_1 0 
+M NULL 1 
+13 Door hindered
+O NULL 2 
+M NULL 1 
+29 Door obsticle detector failed
+B DOD_1 0 
+M NULL 1 
+12 Door failure
+U D_1 0 
+M NULL 1 
+35 Lift door opens when lift in motion
+O NULL 3 
+M NULL 1 
+0
+A NULL 2 
+M NULL 1 
+21 Uncommanded door open
+O NULL 3 
+M NULL 1 
+19 Wiring shorting out
+U W_1 0 
+M NULL 1 
+20 Control panel failed
+B CP_1 0 
+M NULL 1 
+21 Door motor stop fails
+B DMS_2 0 
+M NULL 1 
+27 Lift motion detector failed
+A NULL 2 
+B LMD_1_1 0 
+B LMD_1 0 
+M NULL 1 
+0
+A NULL 2 
+M NULL 1 
+19 Commanded door open
+B CP_1 0 
+M NULL 1 
+27 Lift motion detector failed
+A NULL 2 
+B LMD_1 0 
+B LMD_1_1 0 
+M NULL 1 
+22 Door motor stop failed
+B DMS_2 0 
+M NULL 1 
+39 Door refuses to open when lift stopped.
+O NULL 4 
+M NULL 1 
+20 Control panel failed
+B CP_1 0 
+M NULL 1 
+27 Lift motion detector failed
+B LMD_2 0 
+M NULL 1 
+17 Door motor failed
+O NULL 2 
+M NULL 1 
+12 Motor failed
+B DM_1 0 
+M NULL 1 
+19 Power supply failed
+B PS_1 0 
+M NULL 1 
+29 Lift position detector failed
+B LPD_1 0 
+M NULL 1 
+0
+O NULL 3 
+M NULL 1 
+24 Obsticle detector failed
+B DOD_1 0 
+M NULL 1 
+42 Reaction time of obsticle detector too low
+U DOD_2 0 
+M NULL 1 
+22 Door motor stop failed
+B DMS_1 0 

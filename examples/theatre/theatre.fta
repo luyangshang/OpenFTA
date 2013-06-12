@@ -1,0 +1,14 @@
+theatre.ped
+S NULL 0
+57 Failure Of An Electrical Supply To An
+Operating Theatre.
+
+M Top 1 
+44 Electrical Power To Operating Theatre Fails.
+A AND1 2 
+M Backup_Fail 1 
+58 Backup Generator Fails to Start When Mains Power Fails.			
+O Or1 2 
+B RELAY_FAIL 0 
+B GEN_FAIL 0 
+B MAINS_FAIL 0 

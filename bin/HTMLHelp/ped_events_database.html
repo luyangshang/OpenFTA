@@ -1,0 +1,34 @@
+    <h1>Events Database</h1><hr>
+<p>
+    Event definitions are stored in an Events Database. This allows the same
+    primary event to occur in several places in a fault tree and, because
+    databases may be shared between trees, in several trees.
+</p><p>
+    At any time there is a current database, stored in memory, which contains
+    events available to the current fault tree. Each fault tree has a
+    database file associated with it, which is loaded when the tree is loaded,
+    and saved when the tree is saved.
+</p><p>
+    An events database contains definitions of
+<ul>
+<li>Basic events
+<li>External events
+<li>Undeveloped events
+<li>Conditions (analysed)
+<li>Conditions (not analysed)
+</ul></p><p>
+    In addition to type, each event has associated with it
+<ul>
+<li>ID          - a string of up to 13 characters
+<li>Description - a textual description of the conditions under which
+                      the event is true. This is displayed within the event
+                      symbol in diagram.
+<li>Probability - a numerical value representing the probability that the
+                      event occurs in one test cycle. This is used in
+                      Probabilities Analysis and Monte-Carlo analysis.
+</ul></p><p>
+    Unanalysed Conditions are treated simply as comments, and are not
+    involved in analysis. Analysed conditions are treated as events, with
+    a probability, and are included in analysis on a par with other event
+    types.
+</p>

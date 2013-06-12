@@ -1,0 +1,133 @@
+<h1>
+Monte Carlo Simulation...
+</h1>
+<hr>
+<p><b>
+Control Type
+</b><br>
+Menu Option
+</p>
+<p><b>
+Function
+</b><br>
+Calculates the probability of occurrence of the top level event of the 
+displayed fault tree and generates (and displays) an associated 
+analysis report.
+</p>
+<p><b>
+Location
+</b><br>
+OpenFTA menubar -> Analysis -> Monte Carlo Simulation...
+</p>
+<p><b>
+Shortcuts
+</b><br>
+Accelerator: None.
+<br>
+Toolbar: None.
+</p>
+<p><b>
+Pre-conditions
+</b><br>
+The fault tree has been saved and is valid.
+</p>
+<p><b>
+Operation
+</b><br>
+Determines the probability of the top event occurring by using a Monte
+Carlo Simulation (statistical) algorithm. Also determines 
+(statistically) the cut sets and minimal cut sets, but note that not 
+all cut sets may be determined.
+<br>
+On activation a <i>OpenFTA: Monte Carlo</i> dialog is displayed containing:
+<ul>
+<li>a statement of the total number of unique primary events in the 
+displayed fault tree (including those in any transfer-in trees)
+
+<li>a <i>Number of simulations</i> text field. This contains the number of Monte 
+Carlo Simulations that will be performed upon the fault tree. A default
+value will be displayed, but can be altered. Since a random number 
+generator is used in this method, if the number of simulations is 
+increased, the accuracy of the results obtained will increase, but with
+the penalty of a longer execution time for the calculations
+
+<li>a Unit Time text field. This text field stipulates the number of unit 
+times for which each Monte Carlo Simulation run is to simulate. This is
+only required if there are primary events whose probabilities have been
+entered into the primary events database as a function of time 
+(l-model), rather than as a function of probability (p-model). A 
+default value will be displayed, but can be altered to suit 
+experimental needs.
+
+<li>an Estimated run time statement. This is an estimate of how long the 
+calculation will take, depending upon the parameters stipulated in the
+dialog.
+</ul>
+
+On activation of the <i>Ok</i> button, a working dialog is displayed and the 
+Monte Carlo Simulation is actioned. The <i>Stop</i> button on the dialog may 
+be pressed to abort the simulation at any time. 
+<br>
+On activation of the <i>Cancel</i> button, the procedure is aborted and the 
+<i>OpenFTA: Monte Carlo</i> dialog removed from the screen.
+<br>
+On activation of the <i>Help</i> button, context sensitive help information is
+displayed.
+<br>
+On completion of the simulation, the <i>OpenFTA: Monte Carlo</i> dialog is
+removed from the screen, a <i>Monte Carlo Report</i> is generated (to a file 
+named: <code>&ltfault tree name&gt.mrp</code>) and displayed in a dialog. The report 
+consists of:
+<ul>
+<li>the name of the file used to store the fault tree analysed in
+this report
+
+<li>the date and time of the report's creation
+
+<li>the number of unique primary events in the displayed fault tree 
+(including any transfer-in trees)
+
+<li>the number of Monte Carlo Simulation runs that have been performed upon
+the displayed fault tree
+
+<li>the number of unit times simulated for each run
+
+<li>the number of system failures that occurred, (occurrences of the top 
+level event) due to primary events being failed during the calculations
+
+<li>the probability of at least one component in the tree failing during 
+the simulation
+
+<li>the probability of the top level event occurring
+
+<li>a table of the cut sets found during the simulations. 	Each row of the
+table consists of: the cut set, the number of failures attributed to it
+in the simulations, the estimated probability of one of the events in 
+that cut set occurring and the percentage importance of the cut set in
+comparison to the other cut sets found
+
+<li>a table titled <i>Compressed</i>. This is the same as the previous table, but 
+those cut sets which are less minimal versions of others are subsumed 
+by the more minimalistic ones. The other fields such as the estimated 
+probability are adjusted accordingly
+
+<li>a table titled <i>Primary Event Analysis</i>. This contains a list of all of the
+primary events in the fault tree and their failure contribution towards
+the top level event occurring. This contribution is also stated as a 
+percentage importance value for each primary event.
+</ul></p>
+<p><b>
+Cross References
+</b><br>
+<a href="fta_analysis_menu.html">Analysis</a>
+<br>
+<a href="MinCutSets.html">Minimal Cut Sets</a>
+<br>
+<a href="PrintFTA.html">Print (OpenFTA)</a>
+<br>
+<a href="fta_report_menu.html">Report</a>
+<br>
+<a href="Validate.html">Validate</a>
+<br>
+<a href="ViewFTARep.html">View (OpenFTA, Report).</a>
+</p>

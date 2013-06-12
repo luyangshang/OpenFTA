@@ -1,0 +1,12 @@
+transTest.ped
+S NULL 0
+0
+M NULL 1 
+0
+A NULL 2 
+B c 0 
+M NULL 1 
+0
+A NULL 2 
+B a 0 
+B b 0 

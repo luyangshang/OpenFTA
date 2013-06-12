@@ -1,0 +1,54 @@
+
+<h1>Primary Events Database dialog</h1>
+<hr>
+<p>
+       This dialog allows the entry and modification of the Primary Events
+       in the currently opened <a href="ped_events_database.html">Primary Events Database</a>.
+</p><p>
+       All the currently defined Primary Events are identified in the
+       selection list to the left of the dialog. Selecting an event causes
+       it's details to be displayed in the fields to the right of the dialog.
+</p><p>
+       The Primary Events of the opened database are held in memory, and
+       are only committed to disc when the 'Save' or 'Save As...' options
+       are selected from the main menubar.
+</p><p>
+       An <i>Identifier</i> can be made up of alphanumeric characters, -, +, or
+       _, and are constrained to 13 characters in length.
+</p><p>
+       Modifying the details of a selected Primary Event will only be
+       actioned when the <i>Apply</i> button is pressed. The actions taken when
+       apply is pressed are determined from the Identifer field of the
+       Primary Event. Changing the <i>Identifier</i> for an event that does not 
+       already exist in the database causes a new Primary Event to be 
+       added to the memory resident copy of the database. 
+</p><p>
+       If the <i>Identifer</i> has not changed the current details will replace 
+       those of the selected Primary Event in the memory resident copy
+       of the database.
+</p><p>
+       The <i>Probability</i> field of the Primary Event allows the entry of
+       probabilites in the range 0 to 1, with a precision to 6 decimal
+       places. The probability is taken to be the absolute probability
+       of failure unless the <i>By Unit Time</i> check box is selected. If
+       the probability of failure is given in terms of Unit Time, the
+       calculations of Fault Tree probabilities will take this into 
+       account by prompting the user for a number of unit time intervals
+       to perform the calculations over.
+</p><p>
+       The <i>probability</i> field allows entry in decimal or exponential
+       form. In exponential form, an 'e' or an 'E' symbol can be entered.
+</p><p>
+       For <i>External</i> events the probability must be either 0 or 1.
+</p><p>
+       The <i>descriptive text</i> can be any printable character, including
+       newlines.
+</p><p>
+       The <i>type</i> of the event can be modified by selecting the required
+       radio button. If an event is Basic, External or Undeveloped it
+       may not be changed to a Conditional type.
+</p><p>
+       The fields in the Primary Event may be cleared by pressing the
+       <i>Cancel</i> button. Any existing modifications not applied will be
+       lost.
+</p>

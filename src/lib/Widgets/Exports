@@ -1,0 +1,4 @@
+# Header files exported by this directory, and their dependencies.
+#
+DRAWING_AREA_H = ${TOP}/Widgets/drawingarea.h\
+  $(TREE_PIC_FOREST_H) $(TREE_PIC_H)

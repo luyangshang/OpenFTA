@@ -1,0 +1,9 @@
+transTest1.ped
+S NULL 0
+0
+M NULL 2 
+0
+T transTest1.fta 0 
+A NULL 2 
+B a 0 
+B b 0 

@@ -1,0 +1,37 @@
+
+<h1>Probabilities dialog</h1><hr><p>
+
+       This dialog allows the calculation of the probability of the
+       top level event (system failure) based upon the user-supplied
+       probabilities of primary event failures.
+</p><p>
+       This dialog consists of:
+<ul>
+<li>   <i>Generate all minimal cut sets</i> radio button: When calculating probabilities
+       selection of this button will cause all minimum
+       cut set to be used in the calculation. 
+
+<li>   <i>Limit minimal cut set order to</i> radio button: When calculating probabilities
+       selection of this button will cause only those cut sets
+       of the specified order or lower to be used in the calculation.
+
+<li>   <i>Maximum order</i>: Allows the limiting order for cut sets used in the
+       calculation, up to the maximum order allowed, to be entered.
+
+<li>   Number of terms</i>: The calculation of the probabilities uses a
+       series expansion. The series used has n terms, each of which has
+       <sup>n</sup>C<sub>r</sub> sub terms (giving 2^n terms in all). In practice 
+	 the terms
+       get smaller rapidly, and it is rarely necessary to go past the
+       third term for a large tree. It is advised that the default
+       two terms is calculated first, progressing to higher terms
+       if required.
+
+<li>   <i>Unit time</i>: If primary event probabilities have been entered as
+       occurring per Unit Time, a number of unit times over which
+       the calculation of the probability of the top level event occurring
+       must be entered.
+
+<li>   <i>Estimated run time</i>: A estimate of the amount of time that the
+       calculation of the probabilities will take. 
+</ul></p>

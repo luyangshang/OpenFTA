@@ -1,0 +1,138 @@
+<h1>
+Numerical Probability...
+</h1><hr>
+<p><b>
+Control Type
+</b><br>
+Menu Option
+</p><p><b>
+Function
+</b><br>
+Calculates the probability of occurrence of the top level event of the 
+displayed fault tree and generates (and displays) an associated 
+analysis report.
+</p><p><b>
+Location
+</b><br>
+OpenFTA menubar -> Analysis -> Numerical Probability...
+</p><p><b>
+Shortcuts
+</b><br>
+Accelerator: None.
+<br>
+Toolbar: None.
+</p><p><b>
+Pre-conditions
+</b><br>
+Fault tree has been saved, is valid and the minimal cut sets have been
+generated.
+</p><p><b>
+Operation
+</b><br>
+Calculates the minimal cut set probabilities for the fault tree and the
+probability of the top level event occurring (system failure).
+<br>
+On activation a <i>OpenFTA: Probabilities</i> dialog is displayed 
+containing:
+<ul>
+<li>a statement of the total number of unique primary events in the 
+displayed fault tree (including those in any transfer-in trees)
+
+<li>a text field containing the directory path to the generated minimal cut
+sets file
+
+<li>a description of the file consisting of the number of minimal cut sets,
+their maximum order and the date and time of file generation
+
+<li>a <i>Use all minimal cut sets</i> radio button. If this is selected, then all 
+the generated minimal cut sets are used in the numerical probabilities 
+calculation
+
+<li>a <i>Limit minimal cut set order to</i> radio button. This is only available 
+if the <i>Use all minimal cut sets</i> radio button is not selected. This 
+limits the order of the minimal cut sets used in the calculation to the
+value chosen using the spin buttons (the two, back-to-back arrows)
+
+<li>a <i>Number of terms</i> option which is altered through the use of spin buttons.
+The option is provided in order to limit the number of terms used in 
+the probability calculation. This uses a <b>series expansion</b> in which 
+there are n terms each with <sup>n</sup>C<sub>r</sub> terms making a total number of 2<sup>n</sup> 
+possible terms. By limiting the number of terms used, the calculation 
+is speeded up at a cost of precision. In practice, the terms used get 
+smaller rapidly and it is rarely necessary to go past the third term in
+the calculations for a large tree
+
+<li>a <i>Unit Time</i> text field. This text field stipulates unit time for which
+the numerical probability is to be calculated. This is required if 
+there are primary events whose probabilities have been entered into the
+primary events database as a function of time (&lambda;-model), rather than 
+as an absolute probability, (p-model). A default value will be 
+displayed, but can be altered to suit experimental needs
+
+<li>an <i>Estimated run time</i> statement. This is an estimate of how long the 
+calculation will take, depending upon the parameters stipulated in the 
+dialog.
+</ul>
+On activation of the <i>OK</i> button, a working dialog is displayed and the 
+numerical probabilities calculation is initiated. The <i>Stop</i> button on 
+the dialog may be pressed to abort the process at any time. 
+<br>
+On activation of the <i>Cancel</i> button, the procedure will be aborted and 
+the <i>OpenFTA: Probabilities</i> dialog will be removed from the screen.
+<br>
+On activation of the <i>Help</i> button, a dialog containing context sensitive
+help information will be displayed.
+<br>
+On completion of the operation, the <i>OpenFTA: Probabilities</i> dialog is
+removed, a <i>Probability Report</i> is generated (to a file named: <code>&ltfault 
+tree name&gt.prp</code>) and displayed in a dialog. The report consists of:
+<ul>
+<li>the name of the file used to store the fault tree analysed in
+this report
+
+<li>the date and time of the report's creation
+
+<li>the number of unique primary events in the displayed fault tree 
+(including those in any transfer-in trees)
+
+<li>the number of minimal cut sets available for the fault tree
+
+<li>the maximum order of the minimal cut sets available for use in the 
+probability calculations for the displayed fault tree
+
+<li>a statement of the order of minimal cut sets utilised in the 
+probability calculations, if less than the maximum order available is 
+used
+
+<li>the unit time span used for the calculations
+
+<li>a table titled <i>Minimal cut set probabilities</i>. This consists of a list 
+of all the minimal cut sets and the probabilities of each and every 
+event in a minimal cut set failing in order to cause the top level 
+event to occur (system failure)
+
+<li>the probability of the top level event occurring given the cut set 
+probabilities calculated previously
+
+<li>a table titled <i>Basic Event Analysis</i>. This contains a list of all the 
+primary events in the fault tree and their failure contribution towards
+the top level event occurring. This contribution is also stated as a 
+percentage importance value for each primary event.
+</ul></p>
+<p><b>
+Cross References
+</b><br>
+<a href="fta_analysis_menu.html">Analysis</a>
+<br>
+<a href="MinCutSets.html">Minimal Cut Sets</a>
+<br>
+<a href="fta_dialog_print.html">Print Dialog</a>
+<br>
+<a href="PrintFTARep.html">Print (OpenFTA, Report)</a>
+<br>
+<a href="fta_report_menu.html">Report</a>
+<br>
+<a href="Validate.html">Validate</a>
+<br>
+<a href="ViewFTARep.html">View (OpenFTA, Report)</a>
+</p>

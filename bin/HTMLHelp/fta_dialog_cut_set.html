@@ -1,0 +1,38 @@
+<h1>
+       Cut Set dialog
+</h1><hr><p>
+       This dialog allows the creation of minimum cut sets by the 
+       Algebraic method which reduces the tree logically to obtain 
+       the minimum cut sets.
+</p><p>
+       A cut set is a set of primary events, which, if they all occur,
+       will cause the top event (system failure) to occur. A minimum
+       cut set is a cut set which has no subsets which are cut sets.
+</p><p>
+       A minimum cut set which contains x primary events is called an
+       x-order cut set.
+</p><p>
+       This dialog consists of:
+<ul>
+<li>   Use minimal cut sets on file... check box: If a cut set file already exists for 
+       the tree, selecting this toggle will cause the previously calculated
+       cut sets to be used. If this toggle is not selected, the minimum
+       cut sets will be calculated and written to the <code>&lttree&gt.mcs</code> file.
+
+<li>   If the cut sets on file are limited to an order, and the cut sets
+       to be generated are for a higher order, then only the cut sets
+       of orders higher than those on file will be generated.
+
+<li>   Generate all minimal cut sets radio button: When calculating minimum cut
+       sets selection of this button will cause all orders of minimum
+       cut set to be calculated. This can take a considerable amount of
+       time for large trees with many primary events and gates.
+
+<li>   Limit minimal cut set order to radio button: When calculating minimum
+       cut sets selection of this button will cause only those cut sets
+       of the specified order or lower to be calculated.
+
+<li>       Maximum order: This enables the limiting of the cut set order. Change using the 
+	spin buttons.
+</ul>
+</p>
