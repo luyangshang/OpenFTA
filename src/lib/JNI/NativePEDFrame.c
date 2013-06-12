@@ -119,7 +119,7 @@ JNIEXPORT void JNICALL Java_FTAGUI_PEDFrame_nativeApplyEvent(JNIEnv *env, jobjec
 	new_event.dormant = (jdormant ? (char)DORMANT : (char)FALSE);
 	new_event.lambda = (jconstFailure ? (char)TRUE : (char)FALSE);
 	
-	(const char*)new_event.desc = (*env)->GetStringUTFChars(env, jdesc, 0);
+	new_event.desc = (char *)(*env)->GetStringUTFChars(env, jdesc, 0);
 
 	new_event.prob = jprob;
 
@@ -224,17 +224,16 @@ JNIEXPORT void JNICALL Java_FTAGUI_PEDFrame_nativeSetSelectedEvent(JNIEnv *env ,
 	if(jevent) {
 	
 		/* find event */
-
-		(const char*)event = (*env)->GetStringUTFChars(env, jevent, 0);
-
+		event = (char *)(*env)->GetStringUTFChars(env, jevent, 0);
 		pel = current_database->primary_events_list;
-	    while ( pel != NULL ) {
+
+	    while (pel != NULL) {
       
-			if ( strcmp( ( (PRIMARY_EVENT *)Head_Of( pel ) )->id, event ) == 0 ) {
-				selected_event = (PRIMARY_EVENT *)Head_Of( pel );
+			if (strcmp(((PRIMARY_EVENT *)Head_Of(pel))->id, event) == 0 ) {
+				selected_event = (PRIMARY_EVENT *)Head_Of(pel);
 				break;
 			}
-			pel = Tail_Of( pel );
+			pel = Tail_Of(pel);
 		}
 		(*env)->ReleaseStringUTFChars(env, jevent, event);	
 	} else {

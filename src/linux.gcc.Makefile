@@ -70,4 +70,6 @@ JINCLUDES = \
 -I$(JAVAHOME)/include/linux \
 
 JLIBRARIES = \
--L$(JAVAHOME)/jre/lib/i386 -ljawt -lnsl -ldl -lfl
+-L$(JAVAHOME)/jre/lib/amd64 \
+-L$(JAVAHOME)/jre/lib/i386 \
+-ljawt -lnsl -ldl -lfl
