@@ -37,6 +37,6 @@ clean:
 	cd lib; \
 	$(MAKE) clean
 
-bin:	all
+install:	all
 	cp gui/*.jar ../bin; \
 	cp lib/JNI/libfta.so ../bin
